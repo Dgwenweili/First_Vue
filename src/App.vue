@@ -6,7 +6,6 @@
 
 <script>
 export default {
-  name: 'App',
 }
 </script>
 
@@ -27,7 +26,7 @@ a{
   position:relative;
   display:block;
   width:100%;
-  height:auto;
+  height:100vh;
   overflow:hidden;
 }
 </style>

@@ -92,7 +92,6 @@ export default {
     }
   },
    mounted(){
-     console.log("hhhhhh")
     setTimeout(() => {
       this.$router.push({name:'login'})
     }, 500);
