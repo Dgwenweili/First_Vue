@@ -5,7 +5,6 @@
   "author": "wenwei_li0769@163.com",
   "private": true,
   "scripts": {
-    "svg": "vsvg -s ./static/svg_icons -t ./src/icons",
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
     "build": "node build/build.js"

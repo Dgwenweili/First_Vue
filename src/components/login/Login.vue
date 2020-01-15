@@ -14,8 +14,17 @@
         <div class="login_input">
             <div class="title">密码登录</div>
             <form>
-                <svgicon name="user"></svgicon><input type="text" v-model="login_input.username" id="username" >
-                <input type="text" v-model="login_input.password" id="password"/>
+                <!-- user -->
+                <div class="user">
+                    <svg-icon icon-class="user"></svg-icon><input type="text" v-model="login_input.username" id="username" >
+                </div>
+                <!-- /user -->
+
+                <div class="psw">
+                    <svg-icon icon-class="psw"></svg-icon><input type="text" v-model="login_input.password" id="username" >
+                </div>
+                
+
                 <button @click="login">登录</button>
             </form>
         </div>
@@ -35,7 +44,7 @@ export default {
             },
         }
     },
-
+    
 }
 
 
@@ -95,6 +104,52 @@ export default {
     z-index:2;
     overflow: hidden;
 }
+.login_box .login_input .user{
+    position:relative;
+    display:block;
+    width:100%;
+    height:auto;
+    overflow:hidden;
+    margin-bottom: 1em;
+    border-bottom: 0.0625em #efefef solid;
+}
+.login_box .login_input .user:active{
+    border-bottom: 0.0625em #184ebc solid;
+}
+.login_box .login_input .user:active .svg-icon{
+    color:#184ebc;
+}
+.login_box .login_input .user:active input{
+    color:#184ebc;
+}
+.login_box .login_input .psw{
+    position:relative;
+    display:block;
+    width:100%;
+    height:auto;
+    overflow:hidden;
+    margin-bottom: 1em;
+    border-bottom: 0.0625em #efefef solid;
+}
+.login_box .login_input .psw:active{
+    border-bottom: 0.0625em #184ebc solid;
+}
+.login_box .login_input .psw:active .svg-icon{
+    color:#184ebc;
+}
+.login_box .login_input .psw:active input{
+    color:#184ebc;
+}
+.login_box .login_input .user .svg-icon,.login_box .login_input .psw .svg-icon{
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: 2em;
+    margin-top:-0.5em;
+    margin-left:-2em;
+    height: 2em !important;
+    color: #bfbfbf;
+}
 .login_box .login_input .title{
     font-size: 1.3em;
     text-align: left;
@@ -102,17 +157,21 @@ export default {
     letter-spacing: 0.05em;
 }
 .login_box .login_input input{
-    width: 100%;
+    position: relative;
+    display: inline-block;
+    text-align:left;
+    width: 80%;
     height: auto;
-    font-size:1em;
-    line-height: 3em;
-    text-indent: 0;
+    font-size: 1em;
+    line-height: 2.6em;
+    text-indent: 0.5em;
     color: #bfbfbf;
     border: none;
-    padding-left: 0em;
-    margin-bottom: 1em;
-    border-bottom: 0.0625em #efefef solid;
-    outline-color:#184ebc;
+    margin-left: 0.5em;
+    margin-bottom: 0em;
+    border-bottom:none;
+    outline: #184ebc;
+    border-radius: 1%;
 }
 .login_box .login_input button{
     width: 100%;
