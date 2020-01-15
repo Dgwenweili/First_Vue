@@ -45,6 +45,18 @@ export default {
         }
     },
     
+    methods:{
+        login:function(){
+            let login_psw = "123456"
+            if(this.login_input.password = login_psw){
+                this.$router.push({name:'main'})
+            }
+            if(this.login_input.password !== login_psw){
+                alert("密码错误")
+            }
+        }
+    }
+
 }
 
 
